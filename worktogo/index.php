@@ -4,7 +4,7 @@
 
 
 <head>
-	<title>Inicio de seccion</title>
+	<title>Aulita</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<meta content="" name="keywords">
 	<meta content="" name="description">
@@ -12,15 +12,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="./login/Style.css?aulsitass">
+	<link rel="stylesheet" href="./login/Style.css?axd">
 
 
 </head>
 
 <body>
+	
+
 	<form method="POST" action="" name="formularioiniciar">
 		<p class="LetrasAnimation">Work To Go</p>
-		<br><br>
 		<div class="section">
 			<div class="container">
 				<div class="row full-height justify-content-center">
@@ -53,7 +54,9 @@
 
 												<a>
 													<br><br>
-													<p class="link">¿Olvidaste tu clave de acceso?
+													
+													<a class="link"  href="recupera.php" >¿Olvidaste tu clave de acceso?</a>
+													
 												</a></p>
 												<?php
 												include("./login/con_db.php");
@@ -87,7 +90,7 @@
 
 	</form>
 
-	<form name="formulariocrear" action="procesar_formulario.php" method="POST">
+	<form name="formulariocrear" action="login/procesar_formulario.php" method="POST">
 
 
 
@@ -154,11 +157,11 @@
 
 
 
-			</div>
-			</div>
-			</div>
-			</div>
-			</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
 	</div>
 	</div>
 	</div>
@@ -174,5 +177,3 @@
 </body>
 
 </html>
-
-

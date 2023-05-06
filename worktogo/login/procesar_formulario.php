@@ -17,7 +17,7 @@
 
   if (mysqli_num_rows($resultado) > 0) {
     $mensaje = "El correo electrónico ya está registrado";
-    header("Location: index.php?mensaje=" . urlencode($mensaje));
+    header("Location: ../index.php?mensaje=" . urlencode($mensaje));
     exit;
     
   }
@@ -31,7 +31,7 @@
 
   if (mysqli_num_rows($resultado) > 0) {
     $mensaje = "La cedula ya está registrada";
-    header("Location: index.php?mensaje=" . urlencode($mensaje));
+    header("Location: ../index.php?mensaje=" . urlencode($mensaje));
     exit;
     
   }
@@ -45,6 +45,6 @@
  
   mysqli_close($conexion);
 
-  header("Location: index.php?mensajeok=" . urlencode($mensajeok));
+  header("Location: ../index.php?mensajeok=" . urlencode($mensajeok));
   exit;
 ?>

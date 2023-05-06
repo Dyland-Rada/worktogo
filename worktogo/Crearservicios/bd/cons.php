@@ -3,11 +3,12 @@
 $host = 'localhost';
 $user = 'root';
 $password = '';
-$dbname = 'worktogo';
+$dbname = 'cuentasusers';
 
 try {
-    $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $conexion= new mysqli("localhost","root","","worktogo","3306");
+  $conexion->set_charset("utf8");
+
   } catch(PDOException $e) {
     echo "Error al conectarse a la base de datos: " . $e->getMessage();
   }
