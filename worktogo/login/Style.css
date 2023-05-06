@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 body{
 	font-family: 'Poppins', sans-serif;
@@ -18,7 +19,6 @@ a:hover {
 p {
   font-weight: 500;
   font-size: 14px;
-  
 }
 h4 {
   font-weight: 600;
@@ -100,7 +100,7 @@ display: none;
   background-image: url('/img/pattern_japanese-pattern-2_1_2_0-0_0_1__ffffff00_000000.png');
   position: absolute;
   border-radius: 6px;
-  
+  -webkit-transform-style: preserve-3d;
   
 }
 .card-back {
@@ -209,7 +209,7 @@ display: none;
     background-repeat: no-repeat;
     background-size: 80%;
     animation: animate 4s linear infinite;
-   
+    -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
   }
   
@@ -251,5 +251,22 @@ display: none;
     border: #000;
     border-width: 5%;
   }
+
+  .form-stylerec{
+    padding: 5%;
+    padding: 13px 20px;
+    height: 40px;
+    width: 50%;
+    border-radius: 20px;
+    font-size: 25px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    outline: none;
+    color: #ffffff;
+    background-color: #2d2f44;
+    border: none;
+    box-shadow: 0 5px 8px 0 rgba(21,21,21,.2);
+  }
+
 
   
