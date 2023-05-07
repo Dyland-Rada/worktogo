@@ -64,7 +64,7 @@
 
                   <div class="text-center text-lg-start mt-4 pt-2">
                     <input type="submit" class="btn btn-primary btn-lg"
-                      style="padding-left: 2.5rem; padding-right: 2.5rem;" name="btniniciar">Iniciar</button>
+                      style="padding-left: 2.5rem; padding-right: 2.5rem;" name="btniniciar"></button>
 
                     <?php
                     include("./bd/cons.php");
