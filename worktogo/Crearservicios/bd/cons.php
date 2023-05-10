@@ -1,18 +1,12 @@
 <?php
 
 $host = 'localhost';
-$user = 'root';
-$password = '';
-$dbname = 'cuentasusers';
+$bd = 'worktogo';
+$usuario = 'root';
+$contrasenia = '';
 
-try {
-  $conexion= new mysqli("localhost","root","","worktogo","3306");
-  $conexion->set_charset("utf8");
-
-  } catch(PDOException $e) {
-    echo "Error al conectarse a la base de datos: " . $e->getMessage();
-  }
-
-
-
-?>
+try{
+  $conexion = new PDO("mysql:host=$host;dbname=$bd",$usuario,$contrasenia);
+}catch (exception $ex){
+  echo $ex ->getMessage();
+}

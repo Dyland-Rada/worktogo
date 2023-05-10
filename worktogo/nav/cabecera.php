@@ -14,7 +14,7 @@
 <body>
 
 <ul class="nav">
-<li><a href="../index.php">
+<li><a href="#">
     <img src="../imgs/aea.png" >
 </a></li>
   <li><a href="../index.php">
@@ -29,7 +29,7 @@
   <li><a href="#">
   <i class="fas fa-phone-alt"></i>
   Contactenos</a></li>
-  <li><a href="#">
+  <li><a href="../index.php">
   <i class="fas fa-sign-out-alt"></i>  
   Salir</a></li>
   <li><a href="../crearservicios/index.php">Crear servicio</a></li>

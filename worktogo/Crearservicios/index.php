@@ -20,7 +20,11 @@
  
   ?>
 
-
+  <nav class="navbar navbar-expand navbar-light bg-light">
+      <div class="nav navbar-nav">
+          <a class="btn btn-primary" href="../usuario/index.php">Volver <span class="sr-only">(current)</span></a>
+      </div>
+  </nav>
 
   <div class="container-md">
     <section class="vh-100">
@@ -67,7 +71,7 @@
                       style="padding-left: 2.5rem; padding-right: 2.5rem;" name="btniniciar"></button>
 
                     <?php
-                    include("./bd/cons.php");
+                    include("./bd/bdinicio.php");
                     include("./bd/inciador.php");
                     ?>
 
