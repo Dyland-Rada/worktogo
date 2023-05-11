@@ -17,7 +17,6 @@
   <?php
   session_start(); // Inicia la sesión
   $mi_variable = $_SESSION['mi_variable']; // Obtiene el valor de la variable almacenada en la sesión
- 
   ?>
 
   <nav class="navbar navbar-expand navbar-light bg-light">

@@ -15,9 +15,14 @@ $listaservicios=$sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;"><?php echo $servicio['descripcion'];?></p>
-            <a name="" id="" class="btn btn-primary" href="detalle.php" role="button">mas informacion</a>
+           <form action="star.php" method="POST">
+            <input type="hidden" name="fk_id_Servicio" value="<?php echo $servicio['id'];?>">
+            <input type="submit" class="btn btn-primary" value="Guardar variable">
+
+            </form>     
         </div>
     </div> 
 </div>
 <?php }?>
+
 <?php include("../nav/pie.php");?>

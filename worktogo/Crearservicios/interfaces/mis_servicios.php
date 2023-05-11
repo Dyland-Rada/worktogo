@@ -101,7 +101,7 @@ switch($accion){
                     unlink("img/".($servicio["imagen"]));
                 }
         }
-
+        
         $sentenciaSQL = $conexion->prepare("DELETE FROM servicios WHERE id=:id");
         $sentenciaSQL->bindParam(':id',$txtid);
         $sentenciaSQL->execute();
