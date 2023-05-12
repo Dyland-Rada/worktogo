@@ -85,7 +85,7 @@ CREATE TABLE `servicios` (
 --
 
 INSERT INTO `servicios` (`id`, `nombre`, `imagen`, `descripcion`, `precio`, `fk_id_usuario`) VALUES
-(1, 'Arreglar tubo', '1683760491_image-7.png', 'Vales monda', 12233, '1046692639'),
+(1, 'Arreglar tubo', '1683760491_image-7.png', 'Tuberia Rota', 12233, '1046692639'),
 (3, 'Cambiar un foco', '1683760692_wallpaperbetter.com_7680x4320 (19).jpg', '12321', 123213, '1046692639');
 
 -- --------------------------------------------------------
