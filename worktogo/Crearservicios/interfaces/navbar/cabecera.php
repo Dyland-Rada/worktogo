@@ -20,7 +20,7 @@
   <li><a href="mis_servicios.php">
   <i class="fas fa-compass"></i>
     Creador de servicios</a></li>
-    <li><a href="#.php">
+    <li><a href="./notificaciones.php">
   <i class="fas fa-compass"></i>
    Notificaciones</a></li>
    <li><a href="../index.php">

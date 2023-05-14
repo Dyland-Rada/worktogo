@@ -186,7 +186,7 @@ $listaservicios=$sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
             foreach($listaservicios as $servicio){ ?>
             <tr>
                 <td > <?php echo $servicio['id']; ?></td>
-                <td > <?php echo $servicio['nombre']; ?></td>
+                <td > <?php echo $servicio['nombreser']; ?></td>
                 <td >
                    <img src="img/<?php echo $servicio['imagen']; ?>" width="60" alt="" srcset="">
                

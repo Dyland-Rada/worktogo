@@ -45,6 +45,7 @@ case 'agregar':
         <div class = "form-group">
     <form method="POST">
     <label for="txtid">HE LEIDO Y ACEPTO LOS TERMINOS Y CONDICIONES</label> <br>
+    <a href="tyc.php">ver terminos y condiciones</a><br>
     <input type="checkbox" required class="form-check-input" name="" id="" value="" checked><br>
     <button type="submit" name="accion" value="agregar"class="btn btn-success">Solicitar empleo</button>
     </div>
@@ -61,7 +62,7 @@ case 'agregar':
         <div class="card text-left">
         <img class="card-img-top" style="height: 20rem;"   src="../Crearservicios/interfaces/img/<?php echo $servicio['imagen'];?>">
           <div class="card-body">
-            <h4 class="card-title"><?php echo $servicio['nombre']; ?></h4>
+            <h4 class="card-title"><?php echo $servicio['nombreser']; ?></h4>
             <p class="card-text"><?php echo $servicio['descripcion']; ?></p>
             <h4 class="card-title">Sueldo</h4>
             <p class="card-text">$<?php echo $servicio['precio']; ?></p>
