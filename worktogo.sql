@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-05-2023 a las 20:13:36
+-- Tiempo de generación: 18-05-2023 a las 01:16:14
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.0.28
 
@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `contacto` (
   `ID` int(10) NOT NULL,
   `Nombre` varchar(100) NOT NULL,
-  `Apellido` int(100) NOT NULL,
-  `Email` int(100) NOT NULL,
+  `Apellido` varchar(20) NOT NULL,
+  `Email` varchar(200) NOT NULL,
   `Telefono` int(20) NOT NULL,
   `Descripcion` text NOT NULL,
   `fk_cedula_usuarios` varchar(40) DEFAULT NULL
@@ -55,8 +55,7 @@ CREATE TABLE `frecuentes` (
 
 INSERT INTO `frecuentes` (`ID`, `TITULO`, `SOLUCION`) VALUES
 (1, '¿Como puedo solicitar un servicio?', 'si'),
-(2, '¿Cómo elimino una petición de servicio?', 'Para cancelar una solicitud de amistad que enviaste:\r\nVe a las solicitudes de amistad enviadas o busca la persona a la que le enviaste la solicitud.\r\nHaz clic en Ver solicitudes enviadas en la parte superior izquierda.\r\nHaz clic en Cancelar solicitud.\r\nNota: No puedes cancelar una solicitud de amistad si ya la aceptaron. Obtén información sobre cómo eliminar a alguien de la lista de amigos.'),
-(3, '¿Quién mato a Cristóbal Colom?', 'SI');
+(2, '¿Cómo elimino una petición de servicio?', 'Para cancelar una solicitud de amistad que enviaste:\r\nVe a las solicitudes de amistad enviadas o busca la persona a la que le enviaste la solicitud.\r\nHaz clic en Ver solicitudes enviadas en la parte superior izquierda.\r\nHaz clic en Cancelar solicitud.\r\nNota: No puedes cancelar una solicitud de amistad si ya la aceptaron. Obtén información sobre cómo eliminar a alguien de la lista de amigos.');
 
 -- --------------------------------------------------------
 
@@ -156,7 +155,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `contacto`
 --
 ALTER TABLE `contacto`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `frecuentes`
@@ -168,13 +167,13 @@ ALTER TABLE `frecuentes`
 -- AUTO_INCREMENT de la tabla `servicios`
 --
 ALTER TABLE `servicios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT de la tabla `solicitud`
 --
 ALTER TABLE `solicitud`
-  MODIFY `id_soli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_soli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Restricciones para tablas volcadas
