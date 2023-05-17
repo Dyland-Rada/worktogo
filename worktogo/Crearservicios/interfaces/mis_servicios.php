@@ -25,7 +25,7 @@ $accion=(isset($_POST['accion']))?$_POST['accion']:"";
 
 switch($accion){
     case"agregar":
-        $sentenciaSQL=$conexion->prepare("INSERT INTO servicios (nombre, imagen, descripcion, precio, fk_id_usuario) VALUES (:nombre, :imagen, :descripcion, :precio, :fk_id_usuario); ");
+        $sentenciaSQL=$conexion->prepare("INSERT INTO servicios (nombreser, imagen, descripcion, precio, fk_id_usuario) VALUES (:nombre, :imagen, :descripcion, :precio, :fk_id_usuario); ");
         $sentenciaSQL->bindParam(':nombre',$txtnombre);
 
         $fecha= new Datetime();
@@ -42,7 +42,7 @@ switch($accion){
         header("Location:mis_servicios.php");
      break;
     case"modificar":
-        $sentenciaSQL = $conexion->prepare("UPDATE servicios SET nombre=:nombre,descripcion=:descripcion,precio=:precio WHERE id=:id");
+        $sentenciaSQL = $conexion->prepare("UPDATE servicios SET nombreser=:nombre,descripcion=:descripcion,precio=:precio WHERE id=:id");
         $sentenciaSQL->bindParam(':nombre',$txtnombre);
         $sentenciaSQL->bindParam(':descripcion',$txtdescripcion);
         $sentenciaSQL->bindParam(':precio',$precio);
@@ -84,7 +84,7 @@ switch($accion){
         $sentenciaSQL->execute();
         $servicio=$sentenciaSQL->fetch(PDO::FETCH_LAZY);
         $txtid=$servicio['id'];
-        $txtnombre=$servicio['nombre'];
+        $txtnombre=$servicio['nombreser'];
         $img=$servicio['imagen'];
         $txtdescripcion=$servicio['descripcion'];
         $precio=$servicio['precio'];
@@ -101,7 +101,10 @@ switch($accion){
                     unlink("img/".($servicio["imagen"]));
                 }
         }
-        
+        $sentenciaSQL = $conexion->prepare("DELETE FROM solicitud WHERE fk_id_servicio=:id");
+        $sentenciaSQL->bindParam(':id',$txtid);
+        $sentenciaSQL->execute();
+
         $sentenciaSQL = $conexion->prepare("DELETE FROM servicios WHERE id=:id");
         $sentenciaSQL->bindParam(':id',$txtid);
         $sentenciaSQL->execute();

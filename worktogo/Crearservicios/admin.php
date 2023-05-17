@@ -22,7 +22,6 @@
   <nav class="navbar navbar-expand navbar-light bg-light">
       <div class="nav navbar-nav">
           <a class="btn btn-primary" href="../usuario/index.php">Volver <span class="sr-only">(current)</span></a> <br>
-          <a class="btn" style="color: blue;" href="admin.php">Soy admin</A> <span class="sr-only">(current)</span></a> <br>
       </div>
   </nav>
   
@@ -31,7 +30,7 @@
       <div class="container-fluid h-custom">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-md-9 col-lg-6 col-xl-5">
-            <img src="../imgs/login.png" class="img-fluid" alt="Sample image">
+            <img src="../imgs/aea.png" class="img-fluid" alt="Sample image">
           </div>
           <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
 
@@ -41,39 +40,45 @@
 
               <!-- Email input -->
               <div class="form-outline mb-4">
-                <input type="email" id="form3Example3" class="form-control form-control-lg" name="vusuario"
-                  disabled=disabled required value="
-                  <?php
-                  echo $mi_variable
-                  
-                  ?>" />
-                <label class="form-label" for="form3Example3">Correo electronico</label>
+                <input type="text" id="form3Example3" class="form-control form-control-lg" name="vusuario"
+                placeholder="Usuario administrador">
+                <label class="form-label" for="form3Example3">Usuario administrador</label>
               </div>
 
               <!-- Password input -->
               <div class="form-outline mb-3">
                 <input type="password" id="form3Example4" class="form-control form-control-lg" name="vcontra"
-                  placeholder="Ingresa tu contraseña" required />
+                  placeholder="Contraseña de administracion" required />
                 <label class="form-label" for="form3Example4">contraseña</label>
               </div>
 
               <div class="d-flex justify-content-between align-items-center">
                 <!-- Checkbox que no funciona -->
                 <div class="form-check mb-0">
-                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
-                  <label class="form-check-label" for="form2Example3">
-                    recordar contraseña
-                  </label>
+                 
 
 
                   <div class="text-center text-lg-start mt-4 pt-2">
                     <input type="submit" class="btn btn-primary btn-lg"
                       style="padding-left: 2.5rem; padding-right: 2.5rem;" name="btniniciar"></button>
 
-                    <?php
-                    include("./bd/bdinicio.php");
-                    include("./bd/inciador.php");
-                    ?>
+                      <?php
+
+        if (!empty($_POST["btniniciar"])) {
+    $usuario = $_POST["vusuario"];
+    $contraseña = $_POST["vcontra"];
+
+                 if ($usuario == "admin123" && $contraseña == "root123") {
+              // Redireccionar a otra página
+                header("Location: interfaces/admin.php");
+            exit;
+             } else {
+                    echo '<div class="bad">Los campos de administrador no son válidos</div>';
+             }
+}
+
+
+?>
 
 
                   </div>
